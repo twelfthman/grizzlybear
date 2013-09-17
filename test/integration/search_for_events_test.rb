@@ -8,7 +8,7 @@ class SearchForEventsTest < ActionDispatch::IntegrationTest
     end
     
     it "returns results with a matching event type" do
-      pending "need to write controller search action"
+      skip "need to write controller search action"
       visit root_path
       select "Running", from: "event_type"
       fill_in "event[location]", with: "Auckland"
