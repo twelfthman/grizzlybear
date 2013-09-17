@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  latitude: 1.5
-  longitude: 1.5
-  location: MyString
+  name: Running Event
+  description: 
+  latitude: -36.84846
+  longitude: 174.763332
+  location: Auckland, NZ
   organiser_id: 1
   event_type_id: 1
 
 two:
-  name: MyString
-  description: MyText
-  latitude: 1.5
-  longitude: 1.5
-  location: MyString
-  organiser_id: 1
+  name: Rotorua Run
+  description: 
+  latitude: -38.136848
+  longitude: 176.249746
+  location: Rotorua, NZ
+  organiser_id: 3
   event_type_id: 1

@@ -1,14 +1,13 @@
 require 'test_helper'
 
 class SearchForEventsTest < ActionDispatch::IntegrationTest
+  fixtures :event_types
+  fixtures :events
+
   describe "the search" do
 
-    before :all do
-      FactoryGirl.create :event_type, name: "Running"
-    end
-    
     it "returns results with a matching event type" do
-      skip "need to write controller search action"
+      skip "need to write search action"
       visit root_path
       select "Running", from: "event_type"
       fill_in "event[location]", with: "Auckland"
@@ -19,3 +18,4 @@ class SearchForEventsTest < ActionDispatch::IntegrationTest
   end
   
 end
+

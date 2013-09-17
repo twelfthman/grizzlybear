@@ -1,8 +1,11 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
+running:
+  name: Running
 
-two:
-  name: MyString
+kayaking:
+  name: Kayaking
+
+multisport:
+  name: Multi-sport
