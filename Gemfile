@@ -34,6 +34,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Geocoder gem for location services
+gem 'geocoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -48,7 +51,7 @@ end
 
 group :development, :test do
   gem "minitest", "~> 4.7"
-   gem "minitest-rails-shoulda"
+  gem "minitest-rails-shoulda"
   gem 'capybara_minitest_spec'
   gem "factory_girl_rails", "~> 4.0", require: false
   gem 'guard-minitest'
