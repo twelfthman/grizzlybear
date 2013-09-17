@@ -4,6 +4,8 @@ class Event < ActiveRecord::Base
   validates :date, presence: true
   validates :event_type_id, presence: true
 
-
   belongs_to :event_type
+
+  geocoded_by :location
+  after_validation :geocode
 end

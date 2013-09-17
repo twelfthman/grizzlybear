@@ -27,4 +27,15 @@ class EventTest < ActiveSupport::TestCase
 
     it {must validate_presence_of :event_type_id }
 
+    it "has a longitude and latitude after creation" do
+      event = FactoryGirl.create :event
+      (event.longitude).wont_be_nil
+      (event.latitude ).wont_be_nil
+    end
+
+    it "has a longitude and latitude that matches the location" do
+      event = FactoryGirl.create :event, location: "Auckland, NZ"
+      [event.latitude, event.longitude].must_equal Geocoder.coordinates("Auckland, NZ")
+    end
+
 end
