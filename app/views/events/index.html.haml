@@ -1,0 +1,5 @@
+%h1 Search
+= form_tag action: 'search' do
+  = select_tag "event_type", options_from_collection_for_select(EventType.all, "id", "name")
+  = text_field :event, :location
+  = submit_tag "Search"

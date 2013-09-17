@@ -2,15 +2,19 @@ require 'test_helper'
 
 class SearchForEventsTest < ActionDispatch::IntegrationTest
   describe "the search" do
+
+    before :all do
+      FactoryGirl.create :event_type, name: "Running"
+    end
     
     it "returns results with a matching event type" do
-      pending "needs models to work"
+      pending "need to write controller search action"
       visit root_path
-      fill_in "event type", with: "running"
-      fill_in "location", with: "Auckland"
+      select "Running", from: "event_type"
+      fill_in "event[location]", with: "Auckland"
       click_button "Search"
 
-      page.must have_content "running events near Auckland"
+      page.must_have_content "Running events near Auckland"
     end
   end
   
